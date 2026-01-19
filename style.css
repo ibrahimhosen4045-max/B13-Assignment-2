@@ -2,6 +2,9 @@
     .font-inter{
         font-family: "Inter", sans-serif;
     }
+    .bg-gradien-color{
+        background: linear-gradient(20.64deg, rgba(247, 233, 63, 1) 16.531%,rgba(251, 9, 180, 1) 49.819%,rgba(145, 0, 248, 1) 81.648%);
+    }
 }
 
 @import "tailwindcss"

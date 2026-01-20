@@ -11,5 +11,52 @@
         background-position: 50% 20%;
     }
 }
+
+.glow-border {
+    z-index: 0;
+}
+
+.glow-border::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(247, 233, 63, 1),
+        rgba(145, 0, 248, 1),
+        rgba(251, 9, 180, 1),
+        #007B70,
+        #ECF955,
+        #00FF88
+        
+    );
+    background-size: 400%;
+    filter: blur(6px);
+    animation: glowing 14s linear infinite;
+    z-index: -1;
+}
+
+.glow-border::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 100%;
+    z-index: -5;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
 @import "tailwindcss"
 
